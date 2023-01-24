@@ -8,22 +8,22 @@ const router = createRouter({
       path: "/",
       name: "Home",
       component: () => import("../views/HomeView.vue"),
+      beforeEnter: (to) => {
+        if (store.isAuthenticated === false && to.name !== "Login") {
+          return { name: "Login" };
+        }
+      },
     },
     {
       path: "/Login",
       name: "Login",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import("../views/LoginView.vue"),
+    },
+    {
+      path: "/SignIn",
+      name: "SignIn",
+      component: () => import("../views/SignInView.vue"),
     },
   ],
 });
-
-router.beforeEach((to) => {
-  if (store.isAuthenticated === false && to.name !== "Login") {
-    return { name: "Login" };
-  }
-});
-
 export default router;

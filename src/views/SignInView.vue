@@ -1,14 +1,14 @@
 <template>
   <img class="LogoTitle" src="../assets/Logo-Title.png" />
-  <h2>Login PAGE</h2>
+  <h2>Sign PAGE</h2>
   <input type="text" :placeholder="idPlaceholder" v-model="id" />
   <input
     type="password"
     :placeholder="passwordPlaceholder"
     v-model="password"
-    @keyup.enter="compareLogIn()"
+    @keyup.enter="addSignIn()"
   />
-  <router-link class="linkToSignIn" to="/SignIn">Sign In</router-link>
+  <router-link class="linkToLogIn" to="/Login">Login</router-link>
 </template>
 
 <style>
@@ -39,7 +39,7 @@ input {
   text-align: center;
 }
 
-.linkToSignIn {
+.linkToLogIn {
   display: block;
   margin-top: 50vw;
   margin-left: 70vw;
@@ -63,14 +63,11 @@ export default {
     };
   },
   methods: {
-    compareLogIn() {
-      users.forEach((element) => {
-        if (element.userID.toUpperCase() === this.id.toUpperCase()) {
-          if (element.userPassword === this.password) {
-            store.isAuthenticated = true;
-            this.$router.push({ name: "Home" });
-          }
-        }
+    addSignIn() {
+      console.log(users);
+      users.push({
+        userID: `${this.id.toUpperCase()}`,
+        userPassword: `${this.password}`,
       });
     },
   },

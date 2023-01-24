@@ -68,6 +68,8 @@ export default {
         if (element.userID.toUpperCase() === this.id.toUpperCase()) {
           if (element.userPassword === this.password) {
             store.isAuthenticated = true;
+            store.acutalUserDatas = element;
+            console.log(store.acutalUserDatas);
             this.$router.push({ name: "Home" });
           }
         }

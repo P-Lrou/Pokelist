@@ -1,9 +1,20 @@
 <script setup>
-import TheWelcome from "../components/TheWelcome.vue";
+import SetupPokedex from "@/components/SetupPokedex.vue";
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <h1>HOME PAGE</h1>
+  <SetupPokedex />
 </template>
+
+<script>
+import { store } from "../stores/store";
+
+export default {
+  data() {
+    return {
+      store,
+    };
+  },
+};
+</script>

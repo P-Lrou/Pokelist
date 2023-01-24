@@ -1,0 +1,58 @@
+{
+    "pokemons": [
+        {
+            "pokemonName": "Bulbizarre",
+            "pokemonID": "0001",
+            "pokemomonType": "Plante, Poisson",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+        },
+        {
+            "pokemonName": "Herbizarre ",
+            "pokemonID": "0002",
+            "pokemomonType": "Plante, Poisson",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"
+        },
+        {
+            "pokemonName": "Florizarre ",
+            "pokemonID": "0003",
+            "pokemomonType": "Plante, Poisson",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png"
+        },
+        {
+            "pokemonName": "Salamèche ",
+            "pokemonID": "0004",
+            "pokemomonType": "Feu",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+        },
+        {
+            "pokemonName": "Reptincel ",
+            "pokemonID": "0005",
+            "pokemomonType": "Feu",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png"
+        },
+        {
+            "pokemonName": "Dracaufeu ",
+            "pokemonID": "0006",
+            "pokemomonType": "Feu",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"
+        },
+        {
+            "pokemonName": "Carapuce ",
+            "pokemonID": "0007",
+            "pokemomonType": "Eau",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+        },
+        {
+            "pokemonName": "Carabaffe ",
+            "pokemonID": "0008",
+            "pokemomonType": "Eau",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png"
+        },
+        {
+            "pokemonName": "Tortank ",
+            "pokemonID": "0009",
+            "pokemomonType": "Eau",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
+        }
+    ]
+}

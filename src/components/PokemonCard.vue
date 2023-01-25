@@ -1,10 +1,14 @@
 <template>
   <div class="cardPokemon" v-if="canDisplay">
-    <img class="crossCard" src="../assets/cross_white.svg" />
-    <h1 class="cardPokemonName">{{ actualPokemon.pokemonName }}</h1>
+    <img
+      class="crossCard"
+      src="../assets/cross_white.svg"
+      @click="$emit('update:canDisplay', false)"
+    />
+    <p class="cardPokemonName">{{ actualPokemon.pokemonName }}</p>
     <img class="actualPokemonImage" :src="actualPokemon.pokemonImg" />
-    <h1>{{ actualPokemon.pokemonID }}</h1>
-    <h1>{{ actualPokemon.pokemomonType }}</h1>
+    <p>ID : {{ actualPokemon.pokemonID }}</p>
+    <p>Type(s) : {{ actualPokemon.pokemomonType }}</p>
   </div>
 </template>
 
@@ -12,7 +16,7 @@
 .cardPokemon {
   position: absolute;
   display: block;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   width: 80vw;
   height: 70vh;
   top: 15vh;
@@ -20,16 +24,23 @@
   color: white;
 }
 
-.cardPokemonName {
-  font-size: 8vw;
-  text-align: center;
-}
-
 .crossCard {
   position: absolute;
   right: 2vw;
   top: 2vw;
   width: 10vw;
+}
+
+.cardPokemonName {
+  font-size: 8vw;
+  text-align: center;
+}
+
+.actualPokemonImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vw;
 }
 </style>
 
@@ -41,6 +52,7 @@ export default {
     canDisplay: Boolean,
     actualPokemon: Object,
   },
+  emits: ["update:canDisplay"],
   data() {
     return {
       store,

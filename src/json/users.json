@@ -3,7 +3,7 @@
         {
             "userID": "ADMIN",
             "userPassword": "0000",
-            "discoveredPokemon": ["0001","0002", "0006", "0007"]
+            "discoveredPokemon": ["0001", "0002", "0006", "0007", "0009", "0013", "0017"]
         }
     ]
 }

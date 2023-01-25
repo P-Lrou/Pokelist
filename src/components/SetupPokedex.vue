@@ -21,7 +21,7 @@
   </div>
   <PokemonCard
     :actual-pokemon="selectedPokemon"
-    :can-display="canDisplayPokemonCard"
+    v-model:can-display="canDisplayPokemonCard"
   />
 </template>
 
@@ -31,7 +31,7 @@
   margin-left: 6vw;
   margin-bottom: 5vh;
   background-color: transparent;
-  font-size: 4.5vw;
+  font-size: 4vw;
   width: 50vw;
   color: white;
 }
@@ -48,6 +48,7 @@
   height: 25vw;
   margin: 1vw;
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.2);
   border: solid black;
 }
 </style>

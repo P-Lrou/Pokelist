@@ -12,6 +12,7 @@
     type="password"
     :placeholder="passwordPlaceholder"
     v-model="password"
+    @keyup.enter="compareLogIn()"
   />
   <img class="LogInButton" src="../assets/LogIn.png" @click="compareLogIn()" />
   <router-link class="linkToSignIn" to="/SignIn"
@@ -26,7 +27,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 5vh;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
 }
 
 .messageError {

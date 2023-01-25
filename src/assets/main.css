@@ -1,13 +1,8 @@
-@font-face {
-    font-family: "pokemonLight";
-    src: url("../fonts/pokemon.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-@font-face {
-    font-family: "pokemonStrong";
-    src: url("../fonts/PokemonSolid.ttf");
+*{
+    font-family: 'Poppins', sans-serif;
 }
-
 
 body {
     background-image: url("background.jpg");

@@ -8,8 +8,12 @@ export const store = reactive({
   arrayFilterWithDiscoverOrNot: [],
   arrayWithOnlyDiscovered: [],
   arrayFilter: [],
+  canDisplayPokedex: true,
+  canDisplayTrade: false,
+  canDisplayShop: false,
 
   checkIfDiscovered() {
+    store.arrayFilterWithDiscoverOrNot = [];
     for (let i = 0; i < pokemons.length; i++) {
       for (let v = 0; v < store.acutalUserDatas.discoveredPokemon.length; v++) {
         if (

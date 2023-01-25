@@ -1,6 +1,6 @@
 <template>
-  <img class="LogoTitle" src="../assets/Logo-Title.png" />
-  <h2>Sign PAGE</h2>
+  <img class="LogoTitle" src="../assets/MainTitleSignIn.png" />
+  <p class="messageError">{{ messageError }}</p>
   <input type="text" :placeholder="idPlaceholder" v-model="id" />
   <input
     type="password"
@@ -8,7 +8,10 @@
     v-model="password"
     @keyup.enter="addSignIn()"
   />
-  <router-link class="linkToLogIn" to="/Login">Login</router-link>
+  <img class="SignInButton" src="../assets/SignIn.png" @click="addSignIn()" />
+  <router-link class="linkToLogIn" to="/Login"
+    ><img class="LogInLink" src="../assets/LogIn.png"
+  /></router-link>
 </template>
 
 <style>
@@ -21,11 +24,11 @@
   margin-bottom: 10vh;
 }
 
-h2 {
-  text-align: center;
-  font-size: 8vw;
-  margin-bottom: 5vh;
+.messageError {
   color: white;
+  font-size: 5vw;
+  color: white;
+  text-align: center;
 }
 
 input {
@@ -39,12 +42,25 @@ input {
   text-align: center;
 }
 
+.SignInButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  width: 25vw;
+  border: solid white;
+  padding: 1vw;
+  border-radius: 5vw;
+}
+
 .linkToLogIn {
   display: block;
-  margin-top: 50vw;
+  margin-top: 20vh;
   margin-left: 70vw;
-  color: white;
-  font-size: 5vw;
+}
+
+.LogInLink {
+  width: 20vw;
 }
 </style>
 
@@ -60,15 +76,28 @@ export default {
       id: "",
       passwordPlaceholder: "Enter your Password",
       password: "",
+      messageError: "",
     };
   },
   methods: {
     addSignIn() {
-      console.log(users);
-      users.push({
-        userID: `${this.id.toUpperCase()}`,
-        userPassword: `${this.password}`,
-      });
+      if (this.id.toUpperCase().length === 0 || this.password.length === 0) {
+        this.messageError = "Please Complete all section";
+        return;
+      }
+      if (users.map((elm) => elm.userID).includes(this.id.toUpperCase())) {
+        this.messageError = "This User ID is taked please change it";
+        return;
+      } else {
+        users.push({
+          userID: `${this.id.toUpperCase()}`,
+          userPassword: `${this.password}`,
+          discoveredPokemon: `[]`,
+        });
+        this.id = "";
+        this.password = "";
+        this.messageError = "Your account have been registed";
+      }
     },
   },
 };

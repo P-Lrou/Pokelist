@@ -1,9 +1,9 @@
 {
     "users": [
         {
-            "userID": "Admin",
+            "userID": "ADMIN",
             "userPassword": "1234",
-            "discoveredPokemon": ["0002", "0003", "0007"]
+            "discoveredPokemon": ["0001","0002", "0006", "0007"]
         }
     ]
 }

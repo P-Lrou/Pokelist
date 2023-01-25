@@ -2,7 +2,7 @@
   <div class="pokedex">
     <div
       class="pokemon"
-      v-for="newPokemons in pokemons"
+      v-for="newPokemons in checkIfDiscovered"
       :key="newPokemons.pokemonID"
       :class="newPokemons.pokemonID"
       :style="{
@@ -39,6 +39,32 @@ export default {
       store,
       pokemons,
     };
+  },
+  computed: {
+    checkIfDiscovered() {
+      let newTab = [];
+      for (let i = 0; i < pokemons.length; i++) {
+        for (
+          let v = 0;
+          v < store.acutalUserDatas.discoveredPokemon.length;
+          v++
+        ) {
+          if (
+            pokemons[i].pokemonID === store.acutalUserDatas.discoveredPokemon[v]
+          ) {
+            newTab.push(pokemons[i]);
+          }
+        }
+        if (
+          !newTab.map((elm) => elm.pokemonID).includes(pokemons[i].pokemonID)
+        ) {
+          pokemons[i].pokemonImg =
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/601px-Pokebola-pokeball-png-0.png";
+          newTab.push(pokemons[i]);
+        }
+      }
+      return newTab;
+    },
   },
 };
 </script>

@@ -4,55 +4,101 @@
             "pokemonName": "Bulbizarre",
             "pokemonID": "0001",
             "pokemomonType": "Plante, Poisson",
-            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+            "pokemonGrayScale": "0",
+            "pokemonStatsPV": "3", 
+            "pokemonStatsATQ": "3" ,
+            "pokemonStatsDEF": "3" ,
+            "pokemonStatsVIT": "3" 
+
         },
         {
             "pokemonName": "Herbizarre ",
             "pokemonID": "0002",
             "pokemomonType": "Plante, Poisson",
-            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
+            "pokemonGrayScale": "0",
+            "pokemonStatsPV": "4", 
+            "pokemonStatsATQ": "4" ,
+            "pokemonStatsDEF": "4" ,
+            "pokemonStatsVIT": "4" 
         },
         {
             "pokemonName": "Florizarre ",
             "pokemonID": "0003",
             "pokemomonType": "Plante, Poisson",
-            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png"
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
+            "pokemonGrayScale": "0",
+            "pokemonStatsPV": "5", 
+            "pokemonStatsATQ": "5" ,
+            "pokemonStatsDEF": "5" ,
+            "pokemonStatsVIT": "5" 
         },
         {
             "pokemonName": "Salamèche ",
             "pokemonID": "0004",
             "pokemomonType": "Feu",
-            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+            "pokemonGrayScale": "0",
+            "pokemonStatsPV": "3", 
+            "pokemonStatsATQ": "4" ,
+            "pokemonStatsDEF": "3" ,
+            "pokemonStatsVIT": "4" 
         },
         {
             "pokemonName": "Reptincel ",
             "pokemonID": "0005",
             "pokemomonType": "Feu",
-            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png"
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png",
+            "pokemonGrayScale": "0",
+            "pokemonStatsPV": "4", 
+            "pokemonStatsATQ": "4" ,
+            "pokemonStatsDEF": "4" ,
+            "pokemonStatsVIT": "5" 
         },
         {
             "pokemonName": "Dracaufeu ",
             "pokemonID": "0006",
             "pokemomonType": "Feu",
-            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
+            "pokemonGrayScale": "0",
+            "pokemonStatsPV": "5", 
+            "pokemonStatsATQ": "5" ,
+            "pokemonStatsDEF": "5" ,
+            "pokemonStatsVIT": "6" 
         },
         {
             "pokemonName": "Carapuce ",
             "pokemonID": "0007",
             "pokemomonType": "Eau",
-            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+            "pokemonGrayScale": "0",
+            "pokemonStatsPV": "3", 
+            "pokemonStatsATQ": "3" ,
+            "pokemonStatsDEF": "4" ,
+            "pokemonStatsVIT": "3" 
         },
         {
             "pokemonName": "Carabaffe ",
             "pokemonID": "0008",
             "pokemomonType": "Eau",
-            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png"
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png",
+            "pokemonGrayScale": "0",
+            "pokemonStatsPV": "4", 
+            "pokemonStatsATQ": "4" ,
+            "pokemonStatsDEF": "5" ,
+            "pokemonStatsVIT": "4" 
         },
         {
             "pokemonName": "Tortank ",
             "pokemonID": "0009",
             "pokemomonType": "Eau",
-            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png",
+            "pokemonGrayScale": "0",
+            "pokemonStatsPV": "5", 
+            "pokemonStatsATQ": "5" ,
+            "pokemonStatsDEF": "6" ,
+            "pokemonStatsVIT": "5" 
         }
     ]
 }

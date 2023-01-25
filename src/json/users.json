@@ -2,7 +2,7 @@
     "users": [
         {
             "userID": "ADMIN",
-            "userPassword": "1234",
+            "userPassword": "0000",
             "discoveredPokemon": ["0001","0002", "0006", "0007"]
         }
     ]

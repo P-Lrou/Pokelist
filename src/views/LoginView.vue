@@ -1,8 +1,14 @@
 <template>
   <img class="LogoTitle" src="../assets/MainTitle.png" />
   <p class="messageError">{{ messageError }}</p>
-  <input type="text" :placeholder="idPlaceholder" v-model="id" />
   <input
+    class="inputsLogIn"
+    type="text"
+    :placeholder="idPlaceholder"
+    v-model="id"
+  />
+  <input
+    class="inputsLogIn"
     type="password"
     :placeholder="passwordPlaceholder"
     v-model="password"
@@ -30,7 +36,7 @@
   text-align: center;
 }
 
-input {
+.inputsLogIn {
   display: block;
   margin-left: auto;
   margin-right: auto;

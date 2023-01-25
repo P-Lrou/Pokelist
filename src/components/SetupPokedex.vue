@@ -1,18 +1,41 @@
 <template>
+  <input
+    class="resershInput"
+    type="text"
+    :placeholder="resershPlaceholder"
+    v-model="resersh"
+    @keyup="store.filterByName(resersh)"
+  />
   <div class="pokedex">
     <div
       class="pokemon"
-      v-for="newPokemons in checkIfDiscovered"
+      v-for="newPokemons in store.arrayOnScreen"
       :key="newPokemons.pokemonID"
       :class="newPokemons.pokemonID"
       :style="{
         'background-image': `url(${newPokemons.pokemonImg})`,
+        filter: `grayscale(${newPokemons.pokemonGrayScale})`,
       }"
+      @click="checkIfCanDisplay(newPokemons)"
     ></div>
   </div>
+  <PokemonCard
+    :actual-pokemon="selectedPokemon"
+    :can-display="canDisplayPokemonCard"
+  />
 </template>
 
 <style>
+.resershInput {
+  margin-top: 2vh;
+  margin-left: 6vw;
+  margin-bottom: 5vh;
+  background-color: transparent;
+  font-size: 4.5vw;
+  width: 50vw;
+  color: white;
+}
+
 .pokedex {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -31,39 +54,30 @@
 
 <script>
 import { store } from "../stores/store";
-import { pokemons } from "../json/pokemons.json";
+import PokemonCard from "../components/PokemonCard.vue";
 
 export default {
+  components: {
+    PokemonCard,
+  },
   data() {
     return {
       store,
-      pokemons,
+      resershPlaceholder: "Reserh a Pokemon here",
+      resersh: "",
+      selectedPokemon: {},
+      canDisplayPokemonCard: false,
     };
   },
-  computed: {
-    checkIfDiscovered() {
-      let newTab = [];
-      for (let i = 0; i < pokemons.length; i++) {
-        for (
-          let v = 0;
-          v < store.acutalUserDatas.discoveredPokemon.length;
-          v++
-        ) {
-          if (
-            pokemons[i].pokemonID === store.acutalUserDatas.discoveredPokemon[v]
-          ) {
-            newTab.push(pokemons[i]);
-          }
-        }
-        if (
-          !newTab.map((elm) => elm.pokemonID).includes(pokemons[i].pokemonID)
-        ) {
-          pokemons[i].pokemonImg =
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/601px-Pokebola-pokeball-png-0.png";
-          newTab.push(pokemons[i]);
-        }
+  created() {
+    store.checkIfDiscovered();
+  },
+  methods: {
+    checkIfCanDisplay(newPokemons) {
+      if (newPokemons.pokemonGrayScale === "0") {
+        this.selectedPokemon = newPokemons;
+        this.canDisplayPokemonCard = true;
       }
-      return newTab;
     },
   },
 };

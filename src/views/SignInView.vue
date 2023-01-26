@@ -98,7 +98,10 @@ export default {
         users.push({
           userID: `${this.id.toUpperCase()}`,
           userPassword: `${this.password}`,
-          discoveredPokemon: `[]`,
+          discoveredPokemon: [],
+          userCoins: "100",
+          userShop: [],
+          lastShopUpdate: "01/01/2010",
         });
         this.id = "";
         this.password = "";

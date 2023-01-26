@@ -5,7 +5,9 @@ import SetupTrade from "@/components/SetupTrade.vue";
 </script>
 
 <template>
-  <img class="profilePicture" src="../assets/pokeball.png" />
+  <router-link class="linkToProfile" to="/Profile">
+    <img class="profilePicture" src="../assets/pokeball.png"
+  /></router-link>
   <div v-if="store.canDisplayPokedex" class="pokedexALL">
     <SetupPokedex />
   </div>
@@ -24,7 +26,7 @@ import SetupTrade from "@/components/SetupTrade.vue";
           (store.canDisplayShop = false)
       "
     >
-      Trade
+      <img src="../assets/Trade.png" class="TradeLogo" />
     </p>
     <p
       class="PageTitles"
@@ -34,7 +36,7 @@ import SetupTrade from "@/components/SetupTrade.vue";
           (store.canDisplayShop = false)
       "
     >
-      Pokédex
+      <img src="../assets/Pokedex.png" class="PokedexLogo" />
     </p>
     <p
       class="PageTitles"
@@ -44,7 +46,7 @@ import SetupTrade from "@/components/SetupTrade.vue";
           (store.canDisplayShop = true)
       "
     >
-      Shop
+      <img src="../assets/Shop.png" class="ShopLogo" />
     </p>
   </footer>
 </template>
@@ -59,10 +61,12 @@ import SetupTrade from "@/components/SetupTrade.vue";
 
 footer {
   position: absolute;
-  top: 89vh;
+  top: 88vh;
+  left: 0vw;
   display: flex;
   justify-content: space-evenly;
   width: 98vw;
+  height: 10vh;
 }
 
 .PageTitles {

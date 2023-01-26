@@ -4,7 +4,7 @@
     type="text"
     :placeholder="resershPlaceholder"
     v-model="resersh"
-    @keyup="store.filterByName(resersh)"
+    @keyup="store.filterByNameType(resersh)"
   />
   <div class="pokedex">
     <div
@@ -27,6 +27,7 @@
 
 <style>
 .resershInput {
+  position: relative;
   margin-top: 2vh;
   margin-left: 6vw;
   margin-bottom: 5vh;
@@ -37,13 +38,18 @@
 }
 
 .pokedex {
+  position: relative;
+  max-height: 77vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-left: 5vw;
   margin-right: 5vw;
+  overflow-y: scroll;
 }
 
 .pokemon {
+  position: relative;
+  display: block;
   width: 25vw;
   height: 25vw;
   margin: 1vw;

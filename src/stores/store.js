@@ -1,6 +1,7 @@
 import { reactive } from "vue";
 import { pokemons } from "../json/pokemons.json";
 import { users } from "../json/users.json";
+import { trades } from "../json/trades.json";
 
 export const store = reactive({
   isAuthenticated: false,
@@ -12,6 +13,7 @@ export const store = reactive({
   arrayWithNotDiscover: [],
   arrayFilter: [],
   newArrayShop: [],
+  arrayTrade: [],
   canDisplayPokedex: true,
   canDisplayTrade: false,
   canDisplayShop: false,
@@ -122,5 +124,18 @@ export const store = reactive({
       }
     });
     console.log(store.newArrayShop);
+  },
+
+  doTradeInit() {
+    store.arrayTrade = [];
+    trades.forEach((element) => {
+      pokemons.forEach((elm) => {
+        if (element.pokemonID === elm.pokemonID) {
+          elm.tradePrice = element.price;
+          elm.pokemonGrayScale = "0";
+          store.arrayTrade.push(elm);
+        }
+      });
+    });
   },
 });

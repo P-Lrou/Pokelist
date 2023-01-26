@@ -21,6 +21,18 @@
       </button>
       <button @click="$emit('update:canDisplay', false)">No</button>
     </div>
+    <div v-if="canDisplayTrade" class="buy">
+      <p class="priceQuestion">
+        Would you like to trade this Pokemon for
+        {{ actualPokemon.tradePrice }} coins ?
+      </p>
+      <button
+        @click="tradePokemon(actualPokemon), $emit('update:canDisplay', false)"
+      >
+        Yes
+      </button>
+      <button @click="$emit('update:canDisplay', false)">No</button>
+    </div>
   </div>
 </template>
 
@@ -64,11 +76,13 @@
 <script>
 import { store } from "../stores/store";
 import { users } from "../json/users.json";
+import { trades } from "../json/trades.json";
 
 export default {
   props: {
     canDisplay: Boolean,
     canDisplayPrice: Boolean,
+    canDisplayTrade: Boolean,
     actualPokemon: Object,
   },
   emits: ["update:canDisplay"],
@@ -99,6 +113,30 @@ export default {
           }
         });
       }
+    },
+    tradePokemon(actualPokemon) {
+      if (
+        JSON.parse(actualPokemon.tradePrice) >
+        JSON.parse(store.acutalUserDatas.userCoins)
+      ) {
+        alert("You don't have enough coins");
+      } else {
+        for (let i = 0; i < store.arrayTrade.length; i++) {
+          if (store.arrayTrade[i].pokemonID === actualPokemon.pokemonID) {
+            store.arrayTrade.splice(i, 1);
+            trades.splice(i, 1);
+            users.forEach((elm) => {
+              if (elm.userID === store.acutalUserDatas.userID) {
+                elm.discoveredPokemon.push(actualPokemon.pokemonID);
+                elm.userCoins =
+                  store.acutalUserDatas.userCoins - actualPokemon.tradePrice;
+                store.acutalUserDatas = elm;
+              }
+            });
+          }
+        }
+      }
+      store.doTradeInit();
     },
   },
 };

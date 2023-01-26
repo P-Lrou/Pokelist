@@ -5,7 +5,15 @@ import SetupTrade from "@/components/SetupTrade.vue";
 </script>
 
 <template>
-  <router-link class="linkToProfile" to="/Profile">
+  <router-link
+    class="linkToProfile"
+    to="/Profile"
+    @click="
+      (store.canDisplayTrade = false),
+        (store.canDisplayPokedex = true),
+        (store.canDisplayShop = false)
+    "
+  >
     <img class="profilePicture" src="../assets/pokeball.png"
   /></router-link>
   <div v-if="store.canDisplayPokedex" class="pokedexALL">

@@ -132,6 +132,7 @@ export const store = reactive({
       pokemons.forEach((elm) => {
         if (element.pokemonID === elm.pokemonID) {
           elm.pokemonGrayScale = "0";
+          elm.pokemonTrader = `${element.sellerID}`;
           store.arrayTrade.push(elm);
         }
       });

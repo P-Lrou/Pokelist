@@ -137,6 +137,13 @@ export default {
       } else {
         for (let i = 0; i < store.arrayTrade.length; i++) {
           if (store.arrayTrade[i].pokemonID === actualPokemon.pokemonID) {
+            users.forEach((e) => {
+              if (e.userID === actualPokemon.pokemonTrader) {
+                e.userCoins =
+                  JSON.parse(e.userCoins) +
+                  JSON.parse(actualPokemon.tradePrice);
+              }
+            });
             store.arrayTrade.splice(i, 1);
             trades.splice(i, 1);
             users.forEach((elm) => {

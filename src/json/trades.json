@@ -2,18 +2,15 @@
     "trades": [
         {
             "pokemonID": "0003",
-            "sellerID" : "ADMIN",
-            "price": "20"
+            "sellerID" : "ADMIN"
         },
         {
             "pokemonID": "0002",
-            "sellerID" : "ADMIN",
-            "price": "50"
+            "sellerID" : "ADMIN"
         },
         {
             "pokemonID": "0013",
-            "sellerID" : "ADMIN",
-            "price": "50"
+            "sellerID" : "ADMIN"
         }
     ]
 }

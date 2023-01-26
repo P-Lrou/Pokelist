@@ -10,7 +10,8 @@
             "pokemonStatsATQ": "3" ,
             "pokemonStatsDEF": "3" ,
             "pokemonStatsVIT": "3" ,
-            "price": "20"
+            "price": "20",
+            "tradePrice": "15"
 
         },
         {
@@ -23,7 +24,8 @@
             "pokemonStatsATQ": "4" ,
             "pokemonStatsDEF": "4" ,
             "pokemonStatsVIT": "4" ,
-            "price": "40"
+            "price": "40",
+            "tradePrice": "30"
         },
         {
             "pokemonName": "Florizarre",
@@ -35,7 +37,8 @@
             "pokemonStatsATQ": "5" ,
             "pokemonStatsDEF": "5" ,
             "pokemonStatsVIT": "5" ,
-            "price": "60"
+            "price": "60",
+            "tradePrice": "50"
         },
         {
             "pokemonName": "Salamèche",
@@ -47,7 +50,8 @@
             "pokemonStatsATQ": "4" ,
             "pokemonStatsDEF": "3" ,
             "pokemonStatsVIT": "4" ,
-            "price": "20"
+            "price": "20",
+            "tradePrice": "15"
 
         },
         {
@@ -60,7 +64,8 @@
             "pokemonStatsATQ": "4" ,
             "pokemonStatsDEF": "4" ,
             "pokemonStatsVIT": "5" ,
-            "price": "40"
+            "price": "40",
+            "tradePrice": "30"
         },
         {
             "pokemonName": "Dracaufeu",
@@ -72,7 +77,8 @@
             "pokemonStatsATQ": "5" ,
             "pokemonStatsDEF": "5" ,
             "pokemonStatsVIT": "6" ,
-            "price": "60" 
+            "price": "60",
+            "tradePrice": "50" 
         },
         {
             "pokemonName": "Carapuce",
@@ -84,7 +90,8 @@
             "pokemonStatsATQ": "3" ,
             "pokemonStatsDEF": "4" ,
             "pokemonStatsVIT": "3" ,
-            "price": "20"
+            "price": "20",
+            "tradePrice": "15"
 
         },
         {
@@ -97,7 +104,8 @@
             "pokemonStatsATQ": "4" ,
             "pokemonStatsDEF": "5" ,
             "pokemonStatsVIT": "4" ,
-            "price": "40"
+            "price": "40",
+            "tradePrice": "30"
         },
         {
             "pokemonName": "Tortank",
@@ -109,7 +117,8 @@
             "pokemonStatsATQ": "5" ,
             "pokemonStatsDEF": "6" ,
             "pokemonStatsVIT": "5" ,
-            "price": "60" 
+            "price": "60",
+            "tradePrice": "50" 
         },
         {
             "pokemonName": "Chenipan",
@@ -121,7 +130,8 @@
             "pokemonStatsATQ": "2" ,
             "pokemonStatsDEF": "3" ,
             "pokemonStatsVIT": "3" ,
-            "price": "20"
+            "price": "20",
+            "tradePrice": "15"
 
         },
         {
@@ -134,7 +144,8 @@
             "pokemonStatsATQ": "2" ,
             "pokemonStatsDEF": "4" ,
             "pokemonStatsVIT": "2" ,
-            "price": "40"
+            "price": "40",
+            "tradePrice": "30"
         },
         {
             "pokemonName": "Papilusion",
@@ -146,7 +157,8 @@
             "pokemonStatsATQ": "3" ,
             "pokemonStatsDEF": "3" ,
             "pokemonStatsVIT": "5" ,
-            "price": "60" 
+            "price": "60",
+            "tradePrice": "50" 
         },
         {
             "pokemonName": "Aspicot",
@@ -158,7 +170,8 @@
             "pokemonStatsATQ": "3" ,
             "pokemonStatsDEF": "2" ,
             "pokemonStatsVIT": "3" ,
-            "price": "20"
+            "price": "20",
+            "tradePrice": "15"
 
         },
         {
@@ -171,7 +184,8 @@
             "pokemonStatsATQ": "2" ,
             "pokemonStatsDEF": "3" ,
             "pokemonStatsVIT": "3" ,
-            "price": "40"
+            "price": "40",
+            "tradePrice": "30"
         },
         {
             "pokemonName": "Dardargnan",
@@ -183,7 +197,8 @@
             "pokemonStatsATQ": "6" ,
             "pokemonStatsDEF": "3" ,
             "pokemonStatsVIT": "5" ,
-            "price": "60" 
+            "price": "60",
+            "tradePrice": "50" 
         },
         {
             "pokemonName": "Roucool",
@@ -195,7 +210,8 @@
             "pokemonStatsATQ": "3" ,
             "pokemonStatsDEF": "3" ,
             "pokemonStatsVIT": "4" ,
-            "price": "20"
+            "price": "20",
+            "tradePrice": "15"
 
         },
         {
@@ -208,7 +224,8 @@
             "pokemonStatsATQ": "4" ,
             "pokemonStatsDEF": "4" ,
             "pokemonStatsVIT": "5" ,
-            "price": "40"
+            "price": "40",
+            "tradePrice": "30"
         },
         {
             "pokemonName": "Roucarnage",
@@ -220,7 +237,8 @@
             "pokemonStatsATQ": "5" ,
             "pokemonStatsDEF": "5" ,
             "pokemonStatsVIT": "6" ,
-            "price": "60" 
+            "price": "60",
+            "tradePrice": "50" 
         },
         {
             "pokemonName": "Rattata",
@@ -232,7 +250,8 @@
             "pokemonStatsATQ": "4" ,
             "pokemonStatsDEF": "3" ,
             "pokemonStatsVIT": "5" ,
-            "price": "20"
+            "price": "20",
+            "tradePrice": "15"
         },
         {
             "pokemonName": "Rattatac",
@@ -244,7 +263,8 @@
             "pokemonStatsATQ": "5" ,
             "pokemonStatsDEF": "4" ,
             "pokemonStatsVIT": "6",
-            "price": "40"
+            "price": "40",
+            "tradePrice": "30"
         },
         {
             "pokemonName": "Piafabec",
@@ -256,7 +276,8 @@
             "pokemonStatsATQ": "4" ,
             "pokemonStatsDEF": "2" ,
             "pokemonStatsVIT": "4" ,
-            "price": "20"
+            "price": "20",
+            "tradePrice": "15"
         }
     ]
 }

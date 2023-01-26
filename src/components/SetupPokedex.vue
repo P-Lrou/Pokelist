@@ -39,7 +39,7 @@
 
 .pokedex {
   position: relative;
-  height: 77vh;
+  max-height: 77vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-left: 5vw;

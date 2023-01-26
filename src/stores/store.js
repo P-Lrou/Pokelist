@@ -131,11 +131,19 @@ export const store = reactive({
     trades.forEach((element) => {
       pokemons.forEach((elm) => {
         if (element.pokemonID === elm.pokemonID) {
-          elm.tradePrice = element.price;
           elm.pokemonGrayScale = "0";
           store.arrayTrade.push(elm);
         }
       });
+    });
+    store.arrayWithOnlyDiscovered.forEach((element) => {
+      if (
+        store.arrayWithOnlyDiscovered
+          .map((elm) => elm.pokemonID)
+          .includes(element.pokemonID)
+      ) {
+        element.pokemonGrayScale = "1";
+      }
     });
   },
 });

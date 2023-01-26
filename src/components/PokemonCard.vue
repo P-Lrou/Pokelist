@@ -33,6 +33,19 @@
       </button>
       <button @click="$emit('update:canDisplay', false)">No</button>
     </div>
+    <div v-if="canDisplayTradeChoice" class="buy">
+      <p class="priceQuestion">
+        Would you like to put one the trade shop this Pokemon for
+        {{ actualPokemon.tradePrice }} coins ?
+      </p>
+      <button
+        @click="
+          addToTradePokemon(actualPokemon), $emit('update:canDisplay', false)
+        "
+      >
+        Trade
+      </button>
+    </div>
   </div>
 </template>
 
@@ -84,6 +97,7 @@ export default {
     canDisplayPrice: Boolean,
     canDisplayTrade: Boolean,
     actualPokemon: Object,
+    canDisplayTradeChoice: Boolean,
   },
   emits: ["update:canDisplay"],
   data() {
@@ -137,6 +151,27 @@ export default {
         }
       }
       store.doTradeInit();
+    },
+    addToTradePokemon(actualPokemon) {
+      let temp = trades.map((elm) => elm.pokemonID);
+      if (temp.includes(actualPokemon.pokemonID)) {
+        return;
+      }
+      users.forEach((element) => {
+        if (element.userID === store.acutalUserDatas.userID) {
+          for (let i = 0; i < element.discoveredPokemon.length; i++) {
+            if (element.discoveredPokemon[i] === actualPokemon.pokemonID) {
+              element.discoveredPokemon.splice(i, 1);
+              store.acutalUserDatas = element;
+              store.checkIfDiscovered();
+              trades.push({
+                pokemonID: `${actualPokemon.pokemonID}`,
+                sellerID: `${element.userID}`,
+              });
+            }
+          }
+        }
+      });
     },
   },
 };

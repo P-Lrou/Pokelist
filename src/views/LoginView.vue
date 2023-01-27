@@ -92,8 +92,10 @@ export default {
           if (element.userPassword === this.password) {
             store.isAuthenticated = true;
             store.acutalUserDatas = element;
-            store.acutalUserDatas.discoveredPokemon = store.acutalUserDatas.discoveredPokemon.sort();
-            store.acutalUserDatas.userShop = store.acutalUserDatas.userShop.sort();
+            store.acutalUserDatas.discoveredPokemon =
+              store.acutalUserDatas.discoveredPokemon.sort();
+            store.acutalUserDatas.userShop =
+              store.acutalUserDatas.userShop.sort();
             this.$router.push({ name: "Home" });
           }
         }

@@ -4,7 +4,7 @@
     to="/Profile"
     @click="
       (canDisplayTrade = false),
-        (store.store.canDisplayPokedex = true),
+        (store.canDisplayPokedex = true),
         (canDisplayShop = false)
     "
     v-if="!store.canDisplayNewPokemon"

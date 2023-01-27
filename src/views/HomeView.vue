@@ -3,29 +3,33 @@
     class="linkToProfile"
     to="/Profile"
     @click="
-      (store.canDisplayTrade = false),
-        (store.canDisplayPokedex = true),
-        (store.canDisplayShop = false)
+      (canDisplayTrade = false),
+        (store.store.canDisplayPokedex = true),
+        (canDisplayShop = false)
     "
+    v-if="!store.canDisplayNewPokemon"
   >
     <img class="profilePicture" src="../assets/pokeball.png"
   /></router-link>
   <div v-if="store.canDisplayPokedex" class="pokedexALL">
     <SetupPokedex />
   </div>
-  <div v-if="store.canDisplayShop" class="shopALL">
+  <div v-if="canDisplayShop" class="shopALL">
     <SetupShop />
   </div>
-  <div v-if="store.canDisplayTrade" class="tradeALL">
+  <div v-if="canDisplayTrade" class="tradeALL">
     <SetupTrade />
   </div>
-  <footer>
+  <div v-if="store.canDisplayNewPokemon" class="NewPokemonALL">
+    <SetupNewPokemon />
+  </div>
+  <footer v-if="!store.canDisplayNewPokemon">
     <p
       class="PageTitles"
       @click="
-        (store.canDisplayTrade = true),
+        (canDisplayTrade = true),
           (store.canDisplayPokedex = false),
-          (store.canDisplayShop = false)
+          (canDisplayShop = false)
       "
     >
       <img src="../assets/Trade.png" class="TradeLogo" />
@@ -33,9 +37,9 @@
     <p
       class="PageTitles"
       @click="
-        (store.canDisplayTrade = false),
+        (canDisplayTrade = false),
           (store.canDisplayPokedex = true),
-          (store.canDisplayShop = false)
+          (canDisplayShop = false)
       "
     >
       <img src="../assets/Pokedex.png" class="PokedexLogo" />
@@ -43,9 +47,9 @@
     <p
       class="PageTitles"
       @click="
-        (store.canDisplayTrade = false),
+        (canDisplayTrade = false),
           (store.canDisplayPokedex = false),
-          (store.canDisplayShop = true)
+          (canDisplayShop = true)
       "
     >
       <img src="../assets/Shop.png" class="ShopLogo" />
@@ -82,14 +86,18 @@ footer {
 import SetupPokedex from "@/components/SetupPokedex.vue";
 import SetupShop from "@/components/SetupShop.vue";
 import SetupTrade from "@/components/SetupTrade.vue";
+import SetupNewPokemon from "@/components/SetupNewPokemon.vue";
 import { store } from "../stores/store";
 import { useGeolocation } from "@vueuse/core";
+import { positionLib } from "../json/positionLib.json";
+import { pokemons } from "../json/pokemons.json";
 
 export default {
   components: {
     SetupPokedex,
     SetupShop,
     SetupTrade,
+    SetupNewPokemon,
   },
   setup() {
     const { coords, locatedAt, error, resume, pause } = useGeolocation();
@@ -98,10 +106,70 @@ export default {
   data() {
     return {
       store,
+      canDisplayTrade: false,
+      canDisplayShop: false,
+      tempLatitude: 45.90770789532358,
+      tempLongitude: 6.102008399316632,
     };
   },
+  methods: {
+    changePostions(latitude, longitue) {
+      let newLatitudeMore = latitude + (0.1 / 6378) * (180 / Math.PI);
+      let newlongitueMore =
+        longitue +
+        ((0.5 / 6378) * (180 / Math.PI)) / Math.cos(latitude * (Math.PI / 180));
+      let newLatitudeLess = latitude - (0.1 / 6378) * (180 / Math.PI);
+      let newlongitueLess =
+        longitue -
+        ((0.5 / 6378) * (180 / Math.PI)) / Math.cos(latitude * (Math.PI / 180));
+      return [
+        newLatitudeMore,
+        newlongitueMore,
+        newLatitudeLess,
+        newlongitueLess,
+      ];
+    },
+    checkPosition() {
+      setInterval(() => {
+        this.resume();
+        positionLib.forEach((element) => {
+          let newCoords = this.changePostions(
+            element.latitude,
+            element.longitude
+          );
+          let actualDate = new Date();
+          let actualHour = actualDate.getHours();
+          if (
+            this.tempLatitude <= newCoords[0] &&
+            this.tempLongitude <= newCoords[1] &&
+            this.tempLatitude >= newCoords[2] &&
+            this.tempLongitude >= newCoords[3] &&
+            actualHour === JSON.parse(element.hour)
+          ) {
+            let idArray = store.arrayWithOnlyDiscovered.map(
+              (elm) => elm.pokemonID
+            );
+            if (!idArray.includes(element.newPokemonID)) {
+              this.store.canDisplayNewPokemon = false;
+              this.canDisplayTrade = false;
+              this.canDisplayShop = false;
+              pokemons.forEach((elm) => {
+                if (element.newPokemonID === elm.pokemonID) {
+                  this.pause();
+                  store.newPokemonDiscover = elm;
+                  store.canDisplayPokedex = false;
+                  store.canDisplayNewPokemon = true;
+                }
+              });
+            }
+          }
+        });
+        this.pause();
+      }, 5000);
+    },
+  },
   created() {
-    console.log(this.coords);
+    this.checkPosition();
   },
 };
 </script>

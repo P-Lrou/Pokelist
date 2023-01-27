@@ -6,6 +6,7 @@ import { trades } from "../json/trades.json";
 export const store = reactive({
   isAuthenticated: false,
   acutalUserDatas: "",
+  newPokemonDiscover: "",
   userShop: [],
   arrayOnScreen: [],
   arrayFilterWithDiscoverOrNot: [],
@@ -15,8 +16,7 @@ export const store = reactive({
   newArrayShop: [],
   arrayTrade: [],
   canDisplayPokedex: true,
-  canDisplayTrade: false,
-  canDisplayShop: false,
+  canDisplayNewPokemon: false,
 
   checkIfDiscovered() {
     store.arrayFilterWithDiscoverOrNot = [];

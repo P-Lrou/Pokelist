@@ -7,6 +7,14 @@
             "userCoins": "100",
             "userShop": ["0003", "0005","0008","0011","0015","0016"],
             "lastShopUpdate": "01/26/2023"
+        },
+        {
+            "userID": "Johnny",
+            "userPassword": "1234",
+            "discoveredPokemon": ["0004", "0016", "0012", "0005", "0009"],
+            "userCoins": "100",
+            "userShop": ["0001", "0006","0013","0015","0002","0017"],
+            "lastShopUpdate": "01/26/2023"
         }
     ]
 }

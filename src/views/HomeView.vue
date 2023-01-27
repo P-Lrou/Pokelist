@@ -108,8 +108,6 @@ export default {
       store,
       canDisplayTrade: false,
       canDisplayShop: false,
-      tempLatitude: 45.90770789532358,
-      tempLongitude: 6.102008399316632,
     };
   },
   methods: {
@@ -140,10 +138,10 @@ export default {
           let actualDate = new Date();
           let actualHour = actualDate.getHours();
           if (
-            this.tempLatitude <= newCoords[0] &&
-            this.tempLongitude <= newCoords[1] &&
-            this.tempLatitude >= newCoords[2] &&
-            this.tempLongitude >= newCoords[3] &&
+            this.coords.latitude <= newCoords[0] &&
+            this.coords.longitude <= newCoords[1] &&
+            this.coords.latitude >= newCoords[2] &&
+            this.coords.longitude >= newCoords[3] &&
             actualHour === JSON.parse(element.hour)
           ) {
             let idArray = store.arrayWithOnlyDiscovered.map(

@@ -5,12 +5,24 @@
             "sellerID" : "ADMIN"
         },
         {
-            "pokemonID": "0002",
+            "pokemonID": "0010",
             "sellerID" : "ADMIN"
         },
         {
-            "pokemonID": "0013",
+            "pokemonID": "0015",
             "sellerID" : "ADMIN"
+        },
+        {
+            "pokemonID": "0001",
+            "sellerID" : "JOHNNY"
+        },
+        {
+            "pokemonID": "0008",
+            "sellerID" : "JOHNNY"
+        },
+        {
+            "pokemonID": "0017",
+            "sellerID" : "JOHNNY"
         }
     ]
 }

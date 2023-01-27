@@ -1,9 +1,3 @@
-<script setup>
-import SetupPokedex from "@/components/SetupPokedex.vue";
-import SetupShop from "@/components/SetupShop.vue";
-import SetupTrade from "@/components/SetupTrade.vue";
-</script>
-
 <template>
   <router-link
     class="linkToProfile"
@@ -85,13 +79,29 @@ footer {
 </style>
 
 <script>
+import SetupPokedex from "@/components/SetupPokedex.vue";
+import SetupShop from "@/components/SetupShop.vue";
+import SetupTrade from "@/components/SetupTrade.vue";
 import { store } from "../stores/store";
+import { useGeolocation } from "@vueuse/core";
 
 export default {
+  components: {
+    SetupPokedex,
+    SetupShop,
+    SetupTrade,
+  },
+  setup() {
+    const { coords, locatedAt, error, resume, pause } = useGeolocation();
+    return { coords, locatedAt, error, resume, pause };
+  },
   data() {
     return {
       store,
     };
+  },
+  created() {
+    console.log(this.coords);
   },
 };
 </script>

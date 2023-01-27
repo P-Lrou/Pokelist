@@ -32,7 +32,7 @@
     </p>
   </div>
   <div class="TradingChoicePage" v-if="canDisplayTradingChoicePage">
-    <h1>Choose a Pokemon to Trade</h1>
+    <h1 class="titleForChoose">Choose a Pokemon to Trade</h1>
     <div class="tradeChoice">
       <div
         class="pokemonTradeChoice"
@@ -46,6 +46,14 @@
         @click="checkIfCanDisplayTradeChoice(newPokemons)"
       ></div>
     </div>
+    <button
+      class="addToTrade"
+      @click="
+        (canDisplayTradingPage = true), (canDisplayTradingChoicePage = false)
+      "
+    >
+      Back To TradingPost
+    </button>
   </div>
   <PokemonCard
     :actual-pokemon="selectedPokemon"
@@ -103,9 +111,27 @@
   margin-bottom: 10vh;
 }
 
+.addToTrade {
+  position: absolute;
+  top: 82.5vh;
+  left: 5vw;
+  font-size: 4vw;
+  padding: 2vw;
+  background-color: transparent;
+  color: white;
+  border: solid white;
+  border-radius: 2vw;
+}
+
+.titleForChoose {
+  color: white;
+  margin-top: 8vh;
+  text-align: center;
+}
+
 .tradeChoice {
   position: relative;
-  max-height: 87vh;
+  max-height: 60vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-left: 5vw;
@@ -158,6 +184,7 @@ export default {
       this.selectedPokemon = newPokemons;
       this.canDisplayPokemonCard = true;
       this.canDisplayTradingChoicePage = true;
+      this.canDisplayPriceTrade = false;
     },
   },
 };

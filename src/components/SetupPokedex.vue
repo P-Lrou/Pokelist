@@ -70,7 +70,7 @@ export default {
   data() {
     return {
       store,
-      resershPlaceholder: "Reserh a Pokemon here",
+      resershPlaceholder: "Resersh a Pokemon here",
       resersh: "",
       selectedPokemon: {},
       canDisplayPokemonCard: false,

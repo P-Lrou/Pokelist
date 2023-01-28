@@ -12,11 +12,15 @@
       }"
       @click="checkIfCanDisplay(newPokemons)"
     >
-      <div class="priceShop">{{ newPokemons.price }} coins</div>
+      <div class="priceShop">
+        {{ newPokemons.price }}
+        <img class="pokepieceShop" src="../assets/Pokepiece.png" />
+      </div>
     </div>
   </div>
   <p class="coinsNumberShop">
-    Coins Number : {{ store.acutalUserDatas.userCoins }}
+    {{ store.acutalUserDatas.userCoins }}
+    <img class="pokepieceShop" src="../assets/Pokepiece.png" />
   </p>
   <PokemonCard
     :actual-pokemon="selectedPokemon"
@@ -57,6 +61,8 @@
 
 .priceShop {
   position: relative;
+  display: flex;
+  justify-content: center;
   font-size: 5vw;
   text-align: center;
   color: gold;
@@ -65,10 +71,17 @@
 
 .coinsNumberShop {
   position: relative;
-  text-align: end;
+  display: flex;
+  justify-content: center;
+  margin-left: 75vw;
   font-size: 6vw;
   margin-bottom: 10vh;
   color: gold;
+}
+
+.pokepieceShop {
+  margin-left: 1vw;
+  width: 7vw;
 }
 </style>
 

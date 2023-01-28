@@ -16,7 +16,10 @@
         }"
         @click="checkIfCanDisplay(newPokemons)"
       >
-        <div class="priceTrade">{{ newPokemons.tradePrice }} coins</div>
+        <div class="priceTrade">
+          {{ newPokemons.tradePrice }}
+          <img class="pokepieceShop" src="../assets/Pokepiece.png" />
+        </div>
       </div>
     </div>
     <button
@@ -28,7 +31,8 @@
       Add To trade
     </button>
     <p class="coinsNumberTrade">
-      Coins Number : {{ store.acutalUserDatas.userCoins }}
+      {{ store.acutalUserDatas.userCoins }}
+      <img class="pokepieceShop" src="../assets/Pokepiece.png" />
     </p>
   </div>
   <div class="TradingChoicePage" v-if="canDisplayTradingChoicePage">
@@ -96,6 +100,8 @@
 
 .priceTrade {
   position: relative;
+  display: flex;
+  justify-content: center;
   font-size: 5vw;
   text-align: center;
   color: gold;
@@ -104,6 +110,8 @@
 
 .coinsNumberTrade {
   position: absolute;
+  display: flex;
+  justify-content: center;
   top: 80vh;
   right: 5vw;
   font-size: 6vw;

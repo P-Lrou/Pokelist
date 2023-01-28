@@ -73,7 +73,7 @@
     <div v-if="canDisplayTradeChoice" class="buy">
       <p class="priceQuestion">
         <strong v-if="cantPay === false"
-          >Would you like to put on the tradingpost this Pokemon for
+          >Would you like to trade this Pokemon for
           {{ actualPokemon.tradePrice }} PokePiece ?</strong
         >
       </p>

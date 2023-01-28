@@ -1,63 +1,63 @@
 {
     "positionLib": [
         {
-            "namePos": "PAQUIER",
+            "namePos": "Paquier, Annecy",
             "latitude": 45.90116477816734,
             "longitude": 6.1308731333305495,
             "newPokemonID": "0001",
             "hour": "8"
         },
         {
-            "namePos": "PAQUIER",
+            "namePos": "Paquier, Annecy",
             "latitude": 45.90116477816734,
             "longitude": 6.1308731333305495,
             "newPokemonID": "0004",
             "hour": "12"
         },
         {
-            "namePos": "PAQUIER",
+            "namePos": "Paquier, Annecy",
             "latitude": 45.90116477816734,
             "longitude": 6.1308731333305495,
             "newPokemonID": "0007",
             "hour": "18"
         },
         {
-            "namePos": "COURRIER",
+            "namePos": "Courrier, Annecy",
             "latitude": 45.90410989396287,
             "longitude": 6.1233772521728005,
             "newPokemonID": "0002",
             "hour": "8"
         },
         {
-            "namePos": "COURRIER",
+            "namePos": "Courrier, Annecy",
             "latitude": 45.90410989396287,
             "longitude": 6.1233772521728005,
             "newPokemonID": "0005",
             "hour": "12"
         },
         {
-            "namePos": "COURRIER",
+            "namePos": "Courrier, Annecy",
             "latitude": 45.90410989396287,
             "longitude": 6.1233772521728005,
             "newPokemonID": "0008",
             "hour": "18"
         },
         {
-            "namePos": "CCI",
+            "namePos": "CCI, Annecy",
             "latitude": 45.90770789532358,
             "longitude": 6.102008399316632,
             "newPokemonID": "0003",
             "hour": "8"
         },
         {
-            "namePos": "CCI",
+            "namePos": "CCI, Annecy",
             "latitude": 45.90770789532358,
             "longitude": 6.102008399316632,
             "newPokemonID": "0006",
             "hour": "12"
         },
         {
-            "namePos": "CCI",
+            "namePos": "CCI, Annecy",
             "latitude": 45.90770789532358,
             "longitude": 6.102008399316632,
             "newPokemonID": "0009",

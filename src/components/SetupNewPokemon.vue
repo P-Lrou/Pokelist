@@ -75,6 +75,7 @@ export default {
       users.forEach((element) => {
         if (element.userID === store.acutalUserDatas.userID) {
           element.discoveredPokemon.push(store.newPokemonDiscover.pokemonID);
+          element.userCoins = JSON.parse(element.userCoins) + 10;
           store.acutalUserDatas = element;
           store.canDisplayPokedex = true;
           store.canDisplayNewPokemon = false;

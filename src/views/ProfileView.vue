@@ -1,18 +1,21 @@
 <template>
-  <img
-    @click="this.$router.go(-1)"
-    src="../assets/arrow_white.svg"
-    class="arrowBack"
-  />
-  <h1 class="welcomeText">Welcome</h1>
-  <h1 class="userNameText">{{ store.acutalUserDatas.userID }}</h1>
-  <h2 class="coinsNumber">
-    Coins Number : {{ store.acutalUserDatas.userCoins }}
-  </h2>
-  <h2 class="pokemonsNumber">
-    Pokemons Number : {{ store.acutalUserDatas.discoveredPokemon.length }} /
-    {{ pokemons.length }}
-  </h2>
+  <router-link class="linkBackToProfile" to="/">
+    <img class="arrowBack" src="../assets/arrow_white.svg" />
+  </router-link>
+  <img src="../assets/Welcome.png" class="MainTitleProfile" />
+  <h1 class="userNameText">
+    <strong>{{ store.acutalUserDatas.userID }}</strong>
+  </h1>
+  <div class="playerInfoProfile">
+    <h2 class="coinsNumber">
+      {{ store.acutalUserDatas.userCoins }}
+      <img class="pokepieceProfile" src="../assets/Pokepiece.png" />
+    </h2>
+    <h2 class="pokemonsNumber">
+      Pokemons : {{ store.acutalUserDatas.discoveredPokemon.length }} /
+      {{ pokemons.length }}
+    </h2>
+  </div>
   <h2 class="changeUserInfo" @click="changeUsersInfo()">
     Change User informations :
   </h2>
@@ -29,37 +32,55 @@
     v-model="password"
   />
   <p class="messageError">{{ messageError }}</p>
-  <router-link
-    @click="store.isAuthenticated = false"
-    class="linkToLogOut"
-    to="/"
-  >
-    <p class="logOut">LogOut</p>
-  </router-link>
+  <div class="bottomPageLinks">
+    <router-link class="linkToHelp" to="/Help">
+      <img class="LogOut" src="../assets/Help.png" />
+    </router-link>
+    <router-link
+      @click="store.isAuthenticated = false"
+      class="linkToLogOut"
+      to="/"
+    >
+      <img class="LogOut" src="../assets/Log-out.png" />
+    </router-link>
+  </div>
 </template>
 
 <style>
 .arrowBack {
   width: 15vw;
   transform: rotate(180deg);
-  filter: invert(1);
 }
 
-.welcomeText {
-  text-align: center;
-  color: white;
-  font-size: 10vw;
+.MainTitleProfile {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80vw;
 }
 
 .userNameText {
   text-align: center;
   color: white;
-  font-size: 8vw;
+  font-size: 10vw;
+}
+
+.playerInfoProfile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .coinsNumber {
+  display: flex;
   color: white;
   font-size: 6vw;
+}
+
+.pokepieceProfile {
+  margin-left: 2vw;
+  width: 8vw;
+  height: auto;
 }
 
 .pokemonsNumber {
@@ -68,7 +89,7 @@
 }
 
 .changeUserInfo {
-  margin-top: 10vh;
+  margin-top: 5vh;
   text-align: center;
   color: white;
   font-size: 6vw;
@@ -83,6 +104,13 @@
   font-size: 5vw;
   color: white;
   text-align: center;
+}
+
+.bottomPageLinks {
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: space-evenly;
 }
 </style>
 

@@ -194,6 +194,87 @@
             "pokemonGrayScale": "0",
             "price": "20",
             "tradePrice": "15"
+        },
+        {
+            "pokemonName": "Rapasdepic",
+            "pokemonID": "0022",
+            "pokemomonType": "Normal,Vol",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/022.png",
+            "pokemonGrayScale": "0",
+            "price": "40",
+            "tradePrice": "30"
+        },
+        {
+            "pokemonName": "Abo",
+            "pokemonID": "0023",
+            "pokemomonType": "Poison",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
+            "pokemonGrayScale": "0",
+            "price": "20",
+            "tradePrice": "15"
+        },
+        {
+            "pokemonName": "Arbok ",
+            "pokemonID": "0024",
+            "pokemomonType": "Poison",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png",
+            "pokemonGrayScale": "0",
+            "price": "40",
+            "tradePrice": "30"
+        },
+        {
+            "pokemonName": "Pikachu ",
+            "pokemonID": "0025",
+            "pokemomonType": "Electrik",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+            "pokemonGrayScale": "0",
+            "price": "20",
+            "tradePrice": "15"
+        },
+        {
+            "pokemonName": "Raichu  ",
+            "pokemonID": "0026",
+            "pokemomonType": "Electrik",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/026.png",
+            "pokemonGrayScale": "0",
+            "price": "40",
+            "tradePrice": "30"
+        },
+        {
+            "pokemonName": "Sabelette  ",
+            "pokemonID": "0027",
+            "pokemomonType": "Sol",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/027.png",
+            "pokemonGrayScale": "0",
+            "price": "20",
+            "tradePrice": "15"
+        },
+        {
+            "pokemonName": "Sablaireau   ",
+            "pokemonID": "0028",
+            "pokemomonType": "Sol",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/028.png",
+            "pokemonGrayScale": "0",
+            "price": "40",
+            "tradePrice": "30"
+        },
+        {
+            "pokemonName": "Nidoran  ",
+            "pokemonID": "0029",
+            "pokemomonType": "Poison",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/029.png",
+            "pokemonGrayScale": "0",
+            "price": "20",
+            "tradePrice": "15"
+        },
+        {
+            "pokemonName": "Nidorina    ",
+            "pokemonID": "0030",
+            "pokemomonType": "Poison",
+            "pokemonImg": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/030.png",
+            "pokemonGrayScale": "0",
+            "price": "40",
+            "tradePrice": "30"
         }
     ]
 }
